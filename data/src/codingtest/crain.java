@@ -23,57 +23,18 @@ public class crain {
 				if (board[j][moves[i] - 1] != 0) {
 					iList.add(board[j][moves[i] - 1]);
 					board[j][moves[i] - 1] = 0;
-					break;
-				}
-				if(j==board.length-1) {
-					iList.add(board[j][moves[i] - 1]);
-					board[j][moves[i] - 1] = 0;
-					break;
-				}
-			}
-		}
-
-		for (int i = 0; i < iList.size(); i++) {
-			System.out.printf(iList.get(i) + " ");
-		}
-		System.out.println("");
-		boolean check = true;
-		while(check) {
-			int tmp = 0;
-			for (int i = 0; i < iList.size()-1; i++) {
-				if(iList.get(i)!=0) {
-					for(int j=i+1; j<iList.size();j++) {
-						if(iList.get(j)!=0) {
-							if(iList.get(i)==iList.get(j)) {
-								iList.set(i, 0);
-								iList.set(j, 0);
-								tmp = 1;
-								answer += 2;
-								break;
-							}else {
-								break;
-							}
+					if(iList.size()>1) {
+						if(iList.get(iList.size()-2)==iList.get(iList.size()-1)) {
+							iList.remove(iList.size()-1);
+							iList.remove(iList.size()-1);
+							answer+=2;
 						}
 					}
-				}				
-			}
-			for (int i = 0; i < iList.size(); i++) {
-				System.out.printf(iList.get(i) + " ");
-			}
-			System.out.println("");
-			if(tmp == 0) {
-				check = false;
+					break;
+				}
 			}
 		}
-		System.out.println("");
-		
 		return answer;
-	}
-	
-	public static List<Integer> ListCheck(List<Integer> iList){
-		
-		
-		return iList;
 	}
 
 }
