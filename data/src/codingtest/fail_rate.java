@@ -9,7 +9,6 @@ public class fail_rate {
 		solution(N, stages);
 
 	}
-
 	public static int[] solution(int N, int[] stages) {
 		int[] answer = new int[N];
 		double[] temp = new double[N];
