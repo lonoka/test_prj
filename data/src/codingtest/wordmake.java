@@ -1,7 +1,7 @@
 package codingtest;
-
+//¹Ì¿Ï
 public class wordmake {
-
+	
 	public static void main(String[] args) {
 		String name = "ZAZ";
 		System.out.println(solution(name));
