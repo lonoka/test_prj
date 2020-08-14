@@ -52,7 +52,10 @@ public class scoville {
 		return answer;
 
 	}
-
+	/**
+	 * list를 사용
+	 * Collections.sort를 사용하여 오름차순으로 항상 정렬
+	 * */
 	public static int solution2(int[] scoville, int K) {
 		int answer = 0;
 		List<Integer> iList = new ArrayList<Integer>();
