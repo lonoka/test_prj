@@ -55,6 +55,8 @@ public class scoville {
 	/**
 	 * list를 사용
 	 * Collections.sort를 사용하여 오름차순으로 항상 정렬
+	 * 우선순위를 계속해서 정렳해줌으로써 정해줌
+	 * 우선순위 큐에 비해 메모리 사용이 많음
 	 * */
 	public static int solution2(int[] scoville, int K) {
 		int answer = 0;
