@@ -11,6 +11,11 @@ public class skilltree {
 		solution(skill, skill_trees);
 	}
 
+	/**
+	 *	스킬트리에 포함되지 않은 단어들을 모두 삭제한 후
+	 *	남아있는 단어가 스킬트리순서와 맞는지 안맞는지 확인
+	 *	CBD의 경우 CB도 가능하기 때문에 가장 마지막부터 확인하여 해당 스킬이 존재하는 경우 그 위치보다 앞에 선행 스킬이 있는지 확인 
+	 */
 	public static int solution(String skill, String[] skill_trees) {
 		int answer = 0;
 		String regex = "[^" + skill + "]";
