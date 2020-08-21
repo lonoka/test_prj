@@ -7,6 +7,11 @@ public class rectangle2 {
 		solution(rectangles);
 	}
 
+	/**
+	 * 1. rectangles 2중배열에 들어있는 값 크기만큼 새로운 2중배열을 만든다
+	 * 2. 2중배열 내부에 rectangles 에 포함되는 부분만 숫자 1로 바꾼다
+	 * 3. 더한다
+	 */
 	public static long solution(int[][] rectangles) {
 		long answer = 0;
 		int x = 0;
@@ -19,8 +24,6 @@ public class rectangle2 {
 				y = rectangles[i][2];
 			}
 		}
-		System.out.println(x);
-		System.out.println(y);
 		long[][] rectangle = new long[x][y];
 
 		for (int i = 0; i < rectangles.length; i++) {
