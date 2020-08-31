@@ -48,7 +48,9 @@ public class rectangle2 {
 	}
 	/**
 	 *	HashSet을 사용하여 중복되는 값 자동 제거
-	 * 
+	 * 	rectangles 배열 내부에서 x좌표의 시작부터 끝까지
+	 * 	y좌표의 시작부터 끝까지 각각의 좌표를 String형태로 String set에 넣음
+	 * 	넣은 set길이를 반환
 	 *
 	 */
 	public static long solution2(int[][] rectangles) {
