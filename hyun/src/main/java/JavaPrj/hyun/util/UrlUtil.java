@@ -12,17 +12,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class UrlUtil {
+	//로그 사용
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+	// url 읽어들이는 함수
 	private String readAll(Reader rd) {
 		log.info("readAll Start!");
 
+		// url 읽기위해 문자열변수 사용
 		StringBuilder sb = null;
 
+		// Reader 값이 -1이 되지 않는경우, -1 은 가장 끝
 		try {
 			sb = new StringBuilder();
 			int cp = 0;
 
+			//
 			while ((cp = rd.read()) != -1) {
 				sb.append((char) cp);
 			}
